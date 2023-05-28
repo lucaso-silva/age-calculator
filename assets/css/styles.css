@@ -1,0 +1,20 @@
+:root {
+  --main-font: "Poppins", sans-serif;
+  /* Primary */
+
+--purple: #854dff;
+--light-red: #ff5757;
+
+/* Neutral */
+
+--white: #ffffff;
+--off-white: #f0f0f0;
+--light-grey: #dbdbdb;
+--smokey-grey: #716f6f;
+--off-black: #141414;
+}
+
+body {
+  font-family: var(--main-font);
+  font-size: 32px;
+}

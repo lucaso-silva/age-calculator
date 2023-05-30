@@ -9,35 +9,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 
 
 <body>
-    <main>
-        <div>
-            <div>
-                <label for="day">Day</label>
-                <input type="number" id="day">
+    <div class="container">
+        <div class="main">
+            <div class="section-input">
+                <div class="input-field">
+                    <label for="day">Day</label>
+                    <input type="number" id="day" class="input">
+                </div>
+                <div class="input-field">
+                    <label for="month">Month</label>
+                    <input type="number" id="month" class="input">
+                </div>
+                <div class="input-field">
+                    <label for="year">Year</label>
+                    <input type="number" id="year" class="input">
+                </div>
             </div>
-            <div>
-                <label for="month">Month</label>
-                <input type="number" id="month">
-            </div>
-            <div>
-                <label for="year">Year</label>
-                <input type="number" id="year">
-            </div>
-            
             <button>Ok</button>
+            <div class="section-info">
+                <p><span>--</span> years</p>
+                <p><span>--</span> months</p>
+                <p><span>--</span> days</p>
+            </div>
         </div>
-        <div>
-            <p><span>--</span> years</p>
-            <p><span>--</span> months</p>
-            <p><span>--</span> days</p>
-        </div>
-    </main>
+    </div>
 </body>
 
 </html>

@@ -4,6 +4,15 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    border-bottom: 1px solid var(--light-grey);
+    /* position: relative; */
+}
+
+.label {
+    font-size: .65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--smokey-grey);
 }
 
 .input-field {
@@ -16,6 +25,24 @@
     width: 45%;
     padding: .5rem;
     border-radius: 5px;
-    border: 1px solid var(--purple);
+    border: 1px solid var(--light-grey);
     margin: .5rem auto;
+}
+
+.input:hover {
+    cursor: pointer;
+    border: 1px solid var(--purple);
+}
+
+.btn {
+    background-color: var(--purple);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    float: right;
+    /* position: absolute; */
+}
+
+.btn:hover {
+    background-color: var(--off-black);
 }

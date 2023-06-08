@@ -23,7 +23,7 @@ body {
 }
 
 .container {
-  background-color: var(--smokey-grey);
+  background-color: var(--light-grey);
   width: 100vw;
   height: 100vh;
   padding: 5rem 0; /*draft, need to correct .main align*/
@@ -34,7 +34,7 @@ body {
   background-color: var(--white);
   width: 70%;
   margin: auto;
-  border-radius: 25px;
+  border-radius: 15px;
   border-bottom-right-radius: 80px;
 }
 

@@ -34,6 +34,10 @@
     border: 1px solid var(--purple);
 }
 
+.input-error {
+    border: 1px solid var(--light-red);
+}
+
 .btn {
     background-color: var(--purple);
     border: none;

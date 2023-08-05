@@ -11,7 +11,7 @@ function validField(field) {
       console.log("input a valid day");
     } else {
         field.classList.remove("input-error")
-      console.log("ok ", day);
+      console.log("ok, the day was ", day);
     }
   } else if (id == "month") {
     const month = field.value;
@@ -20,7 +20,7 @@ function validField(field) {
       console.log("input a valid month");
     } else {
         field.classList.remove("input-error")
-      console.log("ok ", month);
+      console.log("ok, the month was ", month);
     }
   } else if (id == "year") {
     const year = field.value;
@@ -29,9 +29,48 @@ function validField(field) {
       console.log("input a valid year");
     } else {
         field.classList.remove("input-error")
-      console.log("ok ", year);
+      console.log("ok, the year was ", year);
     }
   }
+}
+
+function calculateDifferenceYears(year) {
+  const date = new Date();
+  const currentYear = date.getFullYear();
+  
+  console.log("The current year is: " + currentYear);
+
+  const differenceInYears = currentYear - year;
+  console.log("Difference in years: " + differenceInYears)
+}
+
+function calculateDifferenceMonth(month) {
+  const date = new Date();
+  let currentMonth = date.getMonth() + 1;
+  let differenceInMonths;
+
+  console.log("The current month is: " + currentMonth);
+  
+  if(currentMonth > month){
+    differenceInMonths = currentMonth - month
+  } else {
+    differenceInMonths = month - currentMonth;
+  }
+
+  console.log("Difference in months: " + differenceInMonths);
+}
+
+function calculateDifferenceDays(day) {
+  const date = new Date();
+  const currentDay = date.getDate();
+
+  console.log("The current day is: " + currentDay);
+  
+  // if() {
+
+  // }
+  // const differenceInDays = currentDay - day
+  // console.log(differenceInDays);
 }
 
 listInputs.forEach((input) => {
@@ -51,4 +90,7 @@ listInputs.forEach((input) => {
 button.addEventListener("click", (e)=>{
     e.preventDefault()
     console.log(day.value, month.value, year.value)
+    calculateDifferenceYears(year.value);
+    calculateDifferenceMonth(month.value);
+    calculateDifferenceDays(day.value);
 })

@@ -34,43 +34,22 @@ function validField(field) {
   }
 }
 
-function calculateDifferenceYears(year) {
-  const date = new Date();
-  const currentYear = date.getFullYear();
-  
-  console.log("The current year is: " + currentYear);
+function calculateDiffBetweenDates(day, month, year) {
+  let currentDate = new Date();
+  let pastDate = new Date(year, month - 1, day);
+  let diffDates = Math.floor(currentDate - pastDate);
+  console.log("difference between dates: " + diffDates)
 
-  const differenceInYears = currentYear - year;
-  console.log("Difference in years: " + differenceInYears)
-}
+  let oneDay = 1000 * 60 * 60 * 24;
+  let totalDays = Math.floor(diffDates/oneDay);
+  let totalMonths = Math.floor(totalDays/30.41);
+  let totalYears = Math.floor(totalMonths/12)
+  console.log("total years: " + totalYears + ", total months: " + totalMonths + ", total days: " + totalDays)
 
-function calculateDifferenceMonth(month) {
-  const date = new Date();
-  let currentMonth = date.getMonth() + 1;
-  let differenceInMonths;
+  let numMonths = totalMonths - (totalYears * 12)
+  let numDays = Math.floor(totalDays - ((365 * totalYears) + (numMonths *30.41)))
 
-  console.log("The current month is: " + currentMonth);
-  
-  if(currentMonth > month){
-    differenceInMonths = currentMonth - month
-  } else {
-    differenceInMonths = month - currentMonth;
-  }
-
-  console.log("Difference in months: " + differenceInMonths);
-}
-
-function calculateDifferenceDays(day) {
-  const date = new Date();
-  const currentDay = date.getDate();
-
-  console.log("The current day is: " + currentDay);
-  
-  // if() {
-
-  // }
-  // const differenceInDays = currentDay - day
-  // console.log(differenceInDays);
+  console.log("num years: " + totalYears + ", num months: " + numMonths + ", num days: " + numDays)
 }
 
 listInputs.forEach((input) => {
@@ -90,7 +69,9 @@ listInputs.forEach((input) => {
 button.addEventListener("click", (e)=>{
     e.preventDefault()
     console.log(day.value, month.value, year.value)
-    calculateDifferenceYears(year.value);
-    calculateDifferenceMonth(month.value);
-    calculateDifferenceDays(day.value);
+    let pastDay = day.value;
+    let pastMonth = month.value;
+    let pastYear  = year.value;
+    
+    calculateDiffBetweenDates(pastDay, pastMonth, pastYear);
 })

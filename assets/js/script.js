@@ -34,7 +34,7 @@ function validField(field) {
   }
 }
 
-function calculateDiffBetweenDates(day, month, year) {
+function calculateDiffBetweenDates(year, month, day) {
   let currentDate = new Date();
   let pastDate = new Date(year, month - 1, day);
   let diffDates = Math.floor(currentDate - pastDate);
@@ -47,9 +47,21 @@ function calculateDiffBetweenDates(day, month, year) {
   console.log("total years: " + totalYears + ", total months: " + totalMonths + ", total days: " + totalDays)
 
   let numMonths = totalMonths - (totalYears * 12)
-  let numDays = Math.floor(totalDays - ((365 * totalYears) + (numMonths *30.41)))
+  let numDays = Math.floor(totalDays - ((365 * totalYears) + (numMonths *30.5)))
 
   console.log("num years: " + totalYears + ", num months: " + numMonths + ", num days: " + numDays)
+
+  showResults(totalYears, numMonths, numDays)
+}
+
+function showResults(years, months, days) {
+  const infoYears = document.querySelector(".info-years");
+  const infoMonths = document.querySelector(".info-months");
+  const infoDays = document.querySelector(".info-days");
+
+  infoYears.innerHTML = years;
+  infoMonths.innerHTML = months;
+  infoDays.innerHTML = days;
 }
 
 listInputs.forEach((input) => {
@@ -73,5 +85,5 @@ button.addEventListener("click", (e)=>{
     let pastMonth = month.value;
     let pastYear  = year.value;
     
-    calculateDiffBetweenDates(pastDay, pastMonth, pastYear);
+    calculateDiffBetweenDates(pastYear, pastMonth, pastDay);
 })

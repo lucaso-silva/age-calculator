@@ -18,6 +18,9 @@ function validField(field) {
     if (month < 1 || month > 12) {
         field.classList.add("input-error");
       console.log("input a valid month");
+    } else if (month == 2 || month == 4 || month == 6 || month == 9 || month == 11 && day == 31) {
+      field.classList.add("input-error");
+      console.log("this month can't have 31 days");
     } else {
         field.classList.remove("input-error")
       console.log("ok, the month was ", month);

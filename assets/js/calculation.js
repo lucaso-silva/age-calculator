@@ -1,4 +1,4 @@
-import showResults from "./script.js";
+import showResults from "./showResults.js";
 
 export default function calculateDiffBetweenDates(inputs, year, month, day) {
     if (inputs == true) {
@@ -36,4 +36,5 @@ export default function calculateDiffBetweenDates(inputs, year, month, day) {
       console.log("correct inputs");
     }
   }
+
   

@@ -1,4 +1,5 @@
 import validInputs from "./validation.js";
+import showResults from "./showResults.js";
 
 const button = document.querySelector(".btn");
 const inputDay = document.querySelector("#day");
@@ -11,7 +12,7 @@ button.addEventListener("click", (e) => {
   let month = inputMonth.value;
   let year = inputYear.value;
 
-  validInputs(day, month, year);
+  showResults(validInputs(day, month, year));
 
   inputDay.value = '';
   inputMonth.value = '';

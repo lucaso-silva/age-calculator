@@ -28,5 +28,6 @@ export default function validInputs(day, month, year) {
         console.log("There are only 12 months!")
       }
       allInputsField.forEach(input => input.classList.remove("input-error"))
+      return diffDates;
   }
 }

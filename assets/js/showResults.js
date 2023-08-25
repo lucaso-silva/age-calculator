@@ -8,7 +8,8 @@ export default function showResults(value) {
   let totalMonths = Math.floor(totalDays / 30.41);
   let totalYears = Math.floor(totalMonths / 12);
 
-  let numMonths = totalMonths - (totalYears * 12);
+  if(value > 0) {
+    let numMonths = totalMonths - (totalYears * 12);
   let numDays = Math.floor(totalDays - (365 * totalYears + numMonths * 30.41));
 
   console.log("total days: " + totalDays + ", total months: " + totalMonths + ", total years: " + totalYears);
@@ -17,4 +18,8 @@ export default function showResults(value) {
     infoYears.innerHTML = totalYears;
     infoMonths.innerHTML = numMonths;
     infoDays.innerHTML = numDays;
+  } else {
+    console.log("Invalid calculation!!")
+  }
+  
   }

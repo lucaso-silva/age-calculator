@@ -17,14 +17,7 @@ export default function showResults(value) {
       totalDays - (365 * totalYears + numMonths * 30.41)
     );
 
-    console.log(
-      "total days: " +
-        totalDays +
-        ", total months: " +
-        totalMonths +
-        ", total years: " +
-        totalYears
-    );
+    //console.log("total days: " + totalDays + ", total months: " + totalMonths + ", total years: " + totalYears);
 
     infoYears.innerHTML = totalYears;
     infoMonths.innerHTML = numMonths;

@@ -1,11 +1,23 @@
-
 .section-input {
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-around; */
     border-bottom: 1px solid var(--light-grey);
     /* position: relative; */
+}
+
+.section-input div {
+    display: flex;
+    width: 90%;
+}
+
+.error-msg {
+    display: none;
+    color: var(--light-red);
+    font-size: .9em;
+    margin-left: 2em;
+    margin-bottom: .35em;
 }
 
 .label {

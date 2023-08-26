@@ -18,18 +18,21 @@
     <div class="container">
         <div class="main">
             <form class="section-input">
-                <div class="input-field">
-                    <label for="day" class="label">Day</label>
-                    <input type="number" id="day" class="input" required>
+                <div>
+                    <div class="input-field">
+                        <label for="day" class="label">Day</label>
+                        <input type="number" id="day" class="input" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="month" class="label">Month</label>
+                        <input type="number" id="month" class="input" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="year" class="label">Year</label>
+                        <input type="number" id="year" class="input" required>
+                    </div>
                 </div>
-                <div class="input-field">
-                    <label for="month" class="label">Month</label>
-                    <input type="number" id="month" class="input" required>
-                </div>
-                <div class="input-field">
-                    <label for="year" class="label">Year</label>
-                    <input type="number" id="year" class="input" required>
-                </div>
+                <span class="error-msg"></span>
                 <button type="submit" class="btn"><img src="./assets/img/icon-arrow.svg" alt="Icon arrow - submit input" class="arrow"></button>
             </form>
             <section class="info">

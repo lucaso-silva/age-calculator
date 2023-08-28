@@ -1,5 +1,6 @@
 .section-input {
     border-bottom: 1px solid var(--light-grey);
+    position: relative;
 }
 
 .section-input div {
@@ -51,6 +52,8 @@
     border-radius: 50%;
     cursor: pointer;
     position: absolute;
+    top: 60%;
+    right: 0.25%;
 }
 
 .btn:hover {

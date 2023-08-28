@@ -3,6 +3,7 @@ import showResults from "./showResults.js";
 const allInputsField = document.querySelectorAll(".input");
 const inputDayField = document.querySelector("#day");
 const inputMonthField = document.querySelector("#month");
+const inputYearField = document.querySelector("#year");
 const errorMsg = document.querySelector(".error-msg");
 const infoYears = document.querySelector(".info-years");
 const infoMonths = document.querySelector(".info-months");
@@ -63,6 +64,15 @@ export default function validInputs(day, month, year) {
     } else if (month < 1 || month > 12) {
       inputMonthField.classList.add("input-error");
       errorMsg.textContent = "Correct the info about month";
+      errorMsg.style.display = "block";
+
+      infoYears.innerHTML = "--";
+      infoMonths.innerHTML = "--";
+      infoDays.innerHTML = "--";
+      return;
+    } else if (year.length == 0) {
+      inputYearField.classList.add("input-error");
+      errorMsg.textContent = "Input a valid year";
       errorMsg.style.display = "block";
 
       infoYears.innerHTML = "--";

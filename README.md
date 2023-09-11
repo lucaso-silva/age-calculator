@@ -34,6 +34,36 @@ It was based on a challenge from the website [Frontend Mentor](https://www.front
 
 ## What I learned 💡
 
+In this project, I practiced using the JavaScript `Date` object.
+
+It was necessary to create two variables, one to assign the current date and the other variable  to assign the date inputted.
+
+```JavaScript
+let currentDate = new Date();
+
+function validInputs(day, month, year) {
+  let pastDate = new Date(year, month - 1, day);
+  let diffDates = Math.floor(currentDate - pastDate);
+///(...)
+}
+```
+
+The difference between the two periods is expressed in milliseconds, so they were necessary to convert the result into the number of years, months, and days.
+
+```JavaScript
+function showResults(value) {
+  let oneDay = 1000 * 60 * 60 * 24;
+  let totalDays = Math.floor(value / oneDay);
+  let totalMonths = Math.floor(totalDays / 30.41);
+  let totalYears = Math.floor(totalMonths / 12);
+
+  if (value > 0) {
+    let numMonths = totalMonths - totalYears * 12;
+    let numDays = Math.floor(
+      totalDays - (365 * totalYears + numMonths * 30.41)
+    );
+```
+ 
 ---
 ### 🛠️ Continued development
 The next steps will be focused on : 
@@ -43,3 +73,5 @@ The next steps will be focused on :
 
 ### Useful resources
 - [MDN - Position](https://developer.mozilla.org/pt-BR/docs/Web/CSS/position)
+- [W3 Schools - JavaScript Date Reference](https://www.w3schools.com/jsref/jsref_obj_date.asp)
+- [W3 Schools - JavaScript Get Date Methods](https://www.w3schools.com/js/js_date_methods.asp)
